@@ -176,7 +176,10 @@ p{margin:0 0 1em}
 .foot__centros span{display:block;color:#B9AABC;font-size:.88rem}
 .foot__redes a{display:inline-grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:50%;background:rgba(255,255,255,.1)}
 .foot__redes .ico{width:1.3rem;height:1.3rem}
-.foot__bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:2rem;padding-top:1.2rem;color:#B9AABC;font-size:.85rem}
+.foot__bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:2rem;padding-top:1.2rem;color:#B9AABC;font-size:.85rem;display:flex;flex-wrap:wrap;gap:.8rem 1.5rem;align-items:center;justify-content:space-between}
+.foot__credit{display:inline-flex;align-items:center;gap:.5rem;color:#B9AABC !important;text-decoration:none;font-size:.8rem}
+.foot__credit:hover{color:#fff !important}
+.foot__credit img{height:1.3rem;width:auto}
 @media (min-width:900px){.foot__grid{grid-template-columns:1fr 1.4fr 1fr}}
 
 /* Visor de fotos */
