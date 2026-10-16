@@ -192,3 +192,50 @@ p{margin:0 0 1em}
 .lightbox__next{right:-1rem;top:50%;transform:translateY(-50%)}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* v3: mejoras de la skill de rediseño. Menos adornos (sin sombras, bordes ni rayitas bajo los titulos),
+   fotos mas grandes y de esquina recta, y cada seccion con una composicion distinta. */
+:root{--sombra:none}
+.title{font-size:clamp(2rem,6vw,3.2rem);letter-spacing:-.02em}
+.title::after{display:none}
+.hero{background:var(--crema)}
+.hero h1{font-size:clamp(2.3rem,6.4vw,4.4rem);letter-spacing:-.02em;text-wrap:balance}
+.hero__foto img{border-radius:0;aspect-ratio:4/5}
+@media (min-width:900px){.hero__foto{margin-right:calc(-1 * var(--gutter))}}
+.confianza{gap:1.4rem 2rem;padding-bottom:3rem}
+.confianza li{background:none;border:0;border-radius:0;padding:0}
+.confianza b{font-size:1.2rem}
+/* centros: filas grandes en zigzag en vez de una rejilla de tarjetas iguales */
+.centros{grid-template-columns:1fr;gap:3.5rem;margin-top:2.6rem}
+.centro{background:none;border-radius:0;overflow:visible;display:grid;gap:1.2rem;align-items:center}
+.centro__foto img{aspect-ratio:3/2}
+.centro__body{padding:0}
+.centro h3{font-size:clamp(1.6rem,4vw,2.3rem);letter-spacing:-.02em}
+.centro__dato{font-size:1.02rem}
+@media (min-width:860px){.centro{grid-template-columns:1.25fr 1fr;gap:3rem}.centro:nth-child(even) .centro__foto{order:2}}
+/* servicios: lista de texto a tres columnas, sin iconos ni recuadros */
+.servs{gap:2rem 3rem;margin-top:2.4rem}
+.serv{background:none;border:0;border-radius:0;padding:0}
+.serv h3{font-size:1.3rem;color:var(--lila-osc);margin-bottom:.4rem}
+.serv p{font-size:1rem}
+/* como funciona: el orden lo da la posicion, sin numeros */
+.pasos{gap:2rem 3rem}
+.pasos li{background:none;border:0;border-radius:0;padding:0}
+.pasos h3{font-size:1.5rem;color:var(--lila-osc);letter-spacing:-.01em}
+.nosotros__foto img{border-radius:0}
+/* opiniones: una grande y las demas en texto */
+.resenas{gap:2rem 3rem}
+.resena{background:none;border:0;border-radius:0;padding:0}
+.resena::before{display:none}
+.resena--big{grid-column:1/-1}
+.resena--big blockquote{font-family:var(--titulos);font-size:clamp(1.3rem,3.2vw,1.9rem);font-weight:600;line-height:1.35;color:var(--lila-osc);max-width:40em}
+/* fichas de centro */
+.chero__foto img{border-radius:0}
+.ficha{border:0;border-radius:0}
+.intro__lista{border-radius:0}
+.galeria a{border-radius:0}
+.mapa{border-radius:0}
+.otros a{border-radius:0}
+.centro:hover .centro__foto img{transform:none}
+@media (min-width:860px){.centro:nth-child(even){grid-template-columns:1fr 1.25fr}}
+@media (min-width:900px){.hero__in{grid-template-columns:1.35fr 1fr}.hero h1{font-size:clamp(2.3rem,4.6vw,3.9rem)}}
